@@ -4,7 +4,7 @@ clc; close all; clear
 pkg load image
 
 %A=imread('baboon.bmp');  %bmp, jpeg, gif, tif, png
-A=imread('lenna.bmp');
+A=imread('./imagenes/lenna.bmp');
 
 %A: uint8, entero de 8 bits sin signo (0,..., 255)
 
@@ -15,9 +15,9 @@ axis image
 AR=A(:, :, 1); %: todo, 1 banda es el Rojo
 %AR imagen de intensidad (una sola matriz)
 
-figure
+figure 2
 image(AR)
-colormap(gray(256))
+colormap(gray(256)) 
 axis image
 colorbar
 
