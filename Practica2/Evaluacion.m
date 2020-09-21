@@ -8,6 +8,7 @@ Grises=rgb2gray(Imagen);
 figure;
 image(Grises);
 colormap(gray(256));
+
 Intensidad=zeros(4,1); %Niveles de intensidad
 auxGrises=(Grises>=0)+(Grises>63)+(Grises>127)+(Grises>191); %Muestreo
 Intensidad(1,1)=sum(sum(auxGrises==1)); %Cuantos pixeles hay en cada nivel
